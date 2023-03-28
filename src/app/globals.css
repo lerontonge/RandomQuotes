@@ -39,7 +39,7 @@
   }
   
   #new-quote {
-    outline: 1px dotted black;
+   /* outline: 1px dotted black; */
     display: flex;
     padding: auto;
     margin: auto;
