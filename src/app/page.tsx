@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Head from 'next/head';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Montserrat } from 'next/font/google';
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
@@ -133,9 +134,15 @@ export default function Home() {
 }
 
 function Text({ quote, textColor }: { quote: string; textColor: string }) {
-  const finalColor = textColor === '#E9FF70' ? '#36454F' : textColor;
+  const finalColor =
+    textColor === '#FFD670' ||
+    textColor === '#E9FF70' ||
+    textColor === '#FFBE0B'
+      ? '#5A5A5A'
+      : textColor;
 
-  const textStyle = { color: finalColor, fontSize: '25px' };
+  const textStyle = { color: finalColor };
+
   return (
     <div id='text'>
       <q style={textStyle}>{quote}</q>
@@ -150,7 +157,12 @@ const Author = ({
   author: string;
   authorColor: string;
 }) => {
-  const finalColor = authorColor === '#E9FF70' ? '#36454F' : authorColor;
+  const finalColor =
+    authorColor === '#FFD670' ||
+    authorColor === '#E9FF70' ||
+    authorColor === '#FFBE0B'
+      ? '#5A5A5A'
+      : authorColor;
 
   const authorStyle = {
     color: finalColor,
@@ -173,7 +185,12 @@ const NewQuoteButton = ({
   onClick: any;
   buttonColor: string;
 }) => {
-  const finalColor = buttonColor === '#E9FF70' ? '#36454F' : 'white';
+  const finalColor =
+    buttonColor === '#FFD670' ||
+    buttonColor === '#E9FF70' ||
+    buttonColor === '#FFBE0B'
+      ? '#36454F'
+      : 'white';
 
   const buttonStyle = {
     color: finalColor,
