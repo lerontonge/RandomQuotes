@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Head from 'next/head';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Montserrat } from 'next/font/google';
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
